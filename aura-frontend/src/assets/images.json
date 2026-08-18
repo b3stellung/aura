@@ -1,0 +1,179 @@
+{
+  "clothing": {
+    "tops": [
+      {
+        "id": "top-1",
+        "name": "White Linen Shirt",
+        "url": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=500&fit=crop",
+        "category": "top"
+      },
+      {
+        "id": "top-2",
+        "name": "Beige Knit Sweater",
+        "url": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=500&fit=crop",
+        "category": "top"
+      },
+      {
+        "id": "top-3",
+        "name": "Black Silk Blouse",
+        "url": "https://images.unsplash.com/photo-1598554747436-c9293d6a588f?w=400&h=500&fit=crop",
+        "category": "top"
+      },
+      {
+        "id": "top-4",
+        "name": "Denim Jacket",
+        "url": "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=400&h=500&fit=crop",
+        "category": "top"
+      }
+    ],
+    "bottoms": [
+      {
+        "id": "bottom-1",
+        "name": "Blue Straight Jeans",
+        "url": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=500&fit=crop",
+        "category": "bottom"
+      },
+      {
+        "id": "bottom-2",
+        "name": "Black Wide Leg Pants",
+        "url": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=500&fit=crop",
+        "category": "bottom"
+      },
+      {
+        "id": "bottom-3",
+        "name": "Beige Chinos",
+        "url": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=400&h=500&fit=crop",
+        "category": "bottom"
+      }
+    ],
+    "shoes": [
+      {
+        "id": "shoe-1",
+        "name": "White Sneakers",
+        "url": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=500&fit=crop",
+        "category": "shoes"
+      },
+      {
+        "id": "shoe-2",
+        "name": "Black Loafers",
+        "url": "https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=400&h=500&fit=crop",
+        "category": "shoes"
+      },
+      {
+        "id": "shoe-3",
+        "name": "Brown Boots",
+        "url": "https://images.unsplash.com/photo-1542840410-3092f99611a3?w=400&h=500&fit=crop",
+        "category": "shoes"
+      }
+    ],
+    "accessories": [
+      {
+        "id": "acc-1",
+        "name": "Gold Necklace",
+        "url": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=500&fit=crop",
+        "category": "accessory"
+      },
+      {
+        "id": "acc-2",
+        "name": "Leather Watch",
+        "url": "https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=400&h=500&fit=crop",
+        "category": "accessory"
+      },
+      {
+        "id": "acc-3",
+        "name": "Sunglasses",
+        "url": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=500&fit=crop",
+        "category": "accessory"
+      }
+    ]
+  },
+  "outfits": [
+    {
+      "id": "outfit-1",
+      "name": "Casual Day Out",
+      "url": "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=600&h=800&fit=crop",
+      "occasion": "casual"
+    },
+    {
+      "id": "outfit-2",
+      "name": "Business Casual",
+      "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop",
+      "occasion": "work"
+    },
+    {
+      "id": "outfit-3",
+      "name": "Date Night",
+      "url": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=800&fit=crop",
+      "occasion": "date"
+    },
+    {
+      "id": "outfit-4",
+      "name": "Street Style",
+      "url": "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=600&h=800&fit=crop",
+      "occasion": "casual"
+    },
+    {
+      "id": "outfit-5",
+      "name": "Minimalist Look",
+      "url": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600&h=800&fit=crop",
+      "occasion": "casual"
+    }
+  ],
+  "avatars": [
+    {
+      "id": "avatar-1",
+      "url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face"
+    },
+    {
+      "id": "avatar-2",
+      "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
+    },
+    {
+      "id": "avatar-3",
+      "url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face"
+    }
+  ],
+  "discover": [
+    {
+      "id": "discover-1",
+      "title": "Summer Essentials",
+      "url": "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=500&h=600&fit=crop",
+      "category": "casual"
+    },
+    {
+      "id": "discover-2",
+      "title": "Office Ready",
+      "url": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=500&h=600&fit=crop",
+      "category": "work"
+    },
+    {
+      "id": "discover-3",
+      "title": "Weekend Vibes",
+      "url": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=500&h=600&fit=crop",
+      "category": "casual"
+    },
+    {
+      "id": "discover-4",
+      "title": "Evening Elegance",
+      "url": "https://images.unsplash.com/photo-1518577915332-c2a19f149a75?w=500&h=600&fit=crop",
+      "category": "date"
+    },
+    {
+      "id": "discover-5",
+      "title": "Street Fashion",
+      "url": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=500&h=600&fit=crop",
+      "category": "casual"
+    },
+    {
+      "id": "discover-6",
+      "title": "Minimalist Style",
+      "url": "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=500&h=600&fit=crop",
+      "category": "casual"
+    }
+  ],
+  "placeholders": {
+    "user": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&h=200&fit=crop&crop=face",
+    "clothing": "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=400&h=500&fit=crop",
+    "outfit": "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=600&h=800&fit=crop"
+  }
+}

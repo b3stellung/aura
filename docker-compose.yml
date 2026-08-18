@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  # ==================== PostgreSQL + pgvector ====================
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: aura-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: aura_db
+      POSTGRES_USER: aura
+      POSTGRES_PASSWORD: aura123
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aura -d aura_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ==================== Redis ====================
+  redis:
+    image: redis:7-alpine
+    container_name: aura-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ==================== Milvus Standalone ====================
+  milvus:
+    image: milvusdb/milvus:v2.4.0
+    container_name: aura-milvus
+    command: ["milvus", "run", "standalone"]
+    ports:
+      - "19530:19530"
+      - "9091:9091"
+    environment:
+      ETCD_USE_EMBED: "true"
+      COMMON_STORAGETYPE: "local"
+    volumes:
+      - milvus_data:/var/lib/milvus
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9091/healthz"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+volumes:
+  postgres_data:
+  redis_data:
+  milvus_data:

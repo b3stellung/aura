@@ -1,0 +1,55 @@
+package com.aura.model.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+import java.util.UUID;
+
+/**
+ * 会话列表项 DTO
+ * 用于 GET /api/chat/sessions 响应
+ */
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class ConversationResponse {
+
+    /**
+     * 会话 ID
+     */
+    private UUID id;
+
+    /**
+     * 会话标题
+     */
+    private String title;
+
+    /**
+     * 最后一条消息预览
+     */
+    private String lastMessagePreview;
+
+    /**
+     * 消息数量
+     */
+    private Integer messageCount;
+
+    /**
+     * 会话状态
+     */
+    private String status;
+
+    /**
+     * 创建时间
+     */
+    private LocalDateTime createdAt;
+
+    /**
+     * 最后更新时间
+     */
+    private LocalDateTime updatedAt;
+}

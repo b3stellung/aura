@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Reset & Base */
+@layer base {
+  :root {
+    --aura-bg: #f5f1ea;
+    --aura-surface: #fffdfc;
+    --aura-text: #2e2a26;
+    --aura-text-muted: #81786e;
+    --aura-accent: #a98570;
+    --aura-accent-strong: #68705a;
+    --aura-border: #e5ded4;
+    --aura-border-strong: #d6c8b8;
+    --aura-glow-focus: 0 0 0 4px rgb(169 133 112 / 0.22);
+    --aura-selection-bg: rgb(169 133 112 / 0.22);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      'Helvetica Neue',
+      'PingFang SC',
+      'Microsoft YaHei',
+      sans-serif;
+    color-scheme: light;
+    background-color: var(--aura-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+  }
+
+  body {
+    background-color: var(--aura-bg);
+    color: var(--aura-text);
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+  }
+
+  input, textarea, select {
+    border: none;
+    outline: none;
+    font: inherit;
+    color: inherit;
+    background: transparent;
+  }
+
+  ::selection {
+    background: var(--aura-selection-bg);
+    color: var(--aura-text);
+  }
+}
+
+/* Custom Utility Classes */
+@layer utilities {
+  .gradient-instagram,
+  .gradient-aura-warm {
+    background: linear-gradient(135deg, #f5f1ea 0%, #e5ded4 48%, #a98570 100%);
+  }
+
+  .gradient-brand-ring,
+  .gradient-aura-ring {
+    background: conic-gradient(from 45deg, #e5ded4, #a98570, #68705a, #e5ded4);
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+}
+
+/* Page Transitions */
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition:
+    opacity var(--aura-transition-fast, 120ms) var(--aura-ease-standard, ease),
+    transform var(--aura-transition-fast, 120ms) var(--aura-ease-standard, ease);
+}
+.fade-slide-enter-from {
+  opacity: 0;
+  transform: translateY(4px);
+}
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-4px);
+}
+
+/* Fade transition for modals */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity var(--aura-transition-normal, 200ms) var(--aura-ease-standard, ease);
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Subtle focus ring for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--aura-accent, #a98570);
+  outline-offset: 2px;
+  border-radius: 4px;
+  box-shadow: var(--aura-glow-focus, 0 0 0 4px rgb(169 133 112 / 0.22));
+}
+
+/* Custom scrollbar for web */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--aura-border-strong, #d6c8b8);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--aura-accent-strong, #68705a);
+}
+
+html {
+  scrollbar-color: var(--aura-border-strong) transparent;
+}
+
+/* Motion is opt-in for users who request less animation. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+
+  .fade-slide-enter-from,
+  .fade-slide-leave-to {
+    transform: none;
+  }
+}

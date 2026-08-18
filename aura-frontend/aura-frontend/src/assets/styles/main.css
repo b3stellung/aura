@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/* Design System Variables */
+@theme {
+  /* Background Colors - Notion Warm */
+  --color-bg-primary: #FAFAFA;
+  --color-bg-secondary: #FFFFFF;
+  --color-bg-tertiary: #F6F5F4;
+  --color-bg-hover: #F2F1ED;
+  --color-bg-active: #EBEAE5;
+  --color-bg-dark: #15202B;
+
+  /* Text Colors - IG + Vercel */
+  --color-text-primary: #262626;
+  --color-text-secondary: #615D59;
+  --color-text-tertiary: #A39E98;
+  --color-text-inverse: #FFFFFF;
+  --color-text-link: #1D9BF0;
+
+  /* Brand Colors - X Blue */
+  --color-brand-primary: #1D9BF0;
+  --color-brand-hover: #1A8CD8;
+  --color-brand-active: #1680C9;
+  --color-brand-light: #E8F5FE;
+  --color-brand-text: #0A66C2;
+
+  /* Semantic Colors */
+  --color-success: #34C759;
+  --color-error: #ED4956;
+  --color-warning: #FF9F0A;
+  --color-info: #1D9BF0;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-pill: 9999px;
+  --radius-full: 50%;
+
+  /* Shadows - Vercel Style */
+  --shadow-card: 0 0 0 1px rgba(0,0,0,0.08), 0 2px 2px rgba(0,0,0,0.04);
+  --shadow-elevated: 0 4px 18px rgba(0,0,0,0.04), 0 2px 7px rgba(0,0,0,0.027);
+  --shadow-focus: 0 0 0 2px hsla(212, 100%, 48%, 1);
+
+  /* Font Family */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+/* Base Styles */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-text-tertiary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-secondary);
+}
+
+/* Selection Color */
+::selection {
+  background-color: var(--color-brand-light);
+  color: var(--color-brand-text);
+}
